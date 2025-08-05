@@ -82,11 +82,12 @@ entradaDeDados.question('Digite o nome do aluno:', function (nome) {
                     let nota4 = valor4
 
 
-
+                    //Validação de tratamento de entrada vazia
                     if(nota1 == '' || nota2 == '' || nota3 == '' || nota4 == '' || nomeAluno == '') {
                         console.log('ERRO: Existem campos que não foram preenchidos.')
                     } else if (isNaN(nota1) == true || isNaN(nota2) == true|| isNaN(nota3) == true || isNaN(nota4) == true){
                         console.log('ERRO: Não é possivel calcular com a entrada de letras.')
+                        //entrando com a classe number para saber se é um string 
                     }else if(Number(nota1) < 0 || Number(nota1) > 10 || Number(nota2) < 0 || Number(nota2) > 10 || Number(nota3) < 0 || Number(nota3) > 10 || Number(nota4) < 0 || Number(nota4) > 10) {
                         console.log('ERRO: Os valores informados precisam ser entre 0 até 10')
                     }else{
